@@ -11,6 +11,7 @@ while True:
     print("3 - Listar Transações")
     print("4 - Mostrar Saldo")
     print("5 - Sair")
+    print("6 - Gerar Relatório")
 
     opcao = input("Escolha uma opção: ")
 
@@ -70,5 +71,8 @@ while True:
         print("Até logo!")
         break
 
+    elif opcao == "6":
+
+        financeiro.gerar_relatorio()
     else:
         print("Opção inválida.")

@@ -81,3 +81,35 @@ class Financeiro:
                 saldo -= transacao.valor
 
         return saldo
+
+    def gerar_relatorio(self):
+
+        total_receitas = 0
+        total_despesas = 0
+
+        for t in self.transacoes:
+
+            if t.tipo.lower() == "receita":
+                total_receitas += t.valor
+            else:
+                total_despesas += t.valor
+
+        saldo = total_receitas - total_despesas
+
+        relatorio = f"""
+===== RELATÓRIO FINANCEIRO =====
+
+Total de receitas: R$ {total_receitas:.2f}
+Total de despesas: R$ {total_despesas:.2f}
+
+Saldo final: R$ {saldo:.2f}
+
+Quantidade de transações: {len(self.transacoes)}
+
+================================
+"""
+
+        print(relatorio)
+
+        with open("relatorios/relatorio.txt", "w", encoding="utf-8") as arquivo:
+            arquivo.write(relatorio)
