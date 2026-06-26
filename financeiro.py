@@ -17,22 +17,26 @@ class Financeiro:
         if not os.path.exists(self.arquivo):
             return
 
-        with open(self.arquivo, "r", encoding="utf-8") as arquivo:
+        try:
+            with open(self.arquivo, "r", encoding="utf-8") as arquivo:
 
-            dados = json.load(arquivo)
+                dados = json.load(arquivo)
 
-            for item in dados:
+                for item in dados:
 
-                transacao = Transacao(
-                    item["descricao"],
-                    item["valor"],
-                    item["categoria"],
-                    item["tipo"]
-                )
+                    transacao = Transacao(
+                        item["descricao"],
+                        item["valor"],
+                        item["categoria"],
+                        item["tipo"]
+                    )
 
-                transacao.data = item["data"]
+                    transacao.data = item["data"]
 
-                self.transacoes.append(transacao)
+                    self.transacoes.append(transacao)
+
+        except (json.JSONDecodeError, FileNotFoundError):
+            self.transacoes = []
 
     def salvar_dados(self):
 

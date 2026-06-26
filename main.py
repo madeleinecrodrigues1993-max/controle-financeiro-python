@@ -1,10 +1,11 @@
 from financeiro import Financeiro
+from utils import ler_float, mostrar_cabecalho
 
 financeiro = Financeiro()
 
 while True:
 
-    print("\n===== CONTROLE FINANCEIRO =====")
+    mostrar_cabecalho("CONTROLE FINANCEIRO")
     print("1 - Adicionar Receita")
     print("2 - Adicionar Despesa")
     print("3 - Listar Transações")
@@ -16,7 +17,7 @@ while True:
     if opcao == "1":
 
         descricao = input("Descrição: ")
-        valor = float(input("Valor: "))
+        valor = ler_float("Valor: ")
         categoria = input("Categoria: ")
 
         financeiro.adicionar_transacao(
@@ -31,7 +32,7 @@ while True:
     elif opcao == "2":
 
         descricao = input("Descrição: ")
-        valor = float(input("Valor: "))
+        valor = ler_float("Valor: ")
         categoria = input("Categoria: ")
 
         financeiro.adicionar_transacao(
