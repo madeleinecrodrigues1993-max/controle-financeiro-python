@@ -1,0 +1,9 @@
+[
+    {
+        "descricao": "salario",
+        "valor": 3000.0,
+        "categoria": "trabalho",
+        "tipo": "Receita",
+        "data": "26/06/2026"
+    }
+]
