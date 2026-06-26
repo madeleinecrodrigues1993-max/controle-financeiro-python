@@ -141,7 +141,7 @@ Este projeto reforçou conhecimentos em:
 
 ## Autor
 
-Madeleine Rosa
+Madeleine Rodrigues
 
 Projeto desenvolvido para portfólio de desenvolvimento em Python.
 
