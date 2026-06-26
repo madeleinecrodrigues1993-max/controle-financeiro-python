@@ -1,7 +1,3 @@
-Claro — aqui está o README limpo, profissional e sem emojis, pronto para colar no GitHub.
-
----
-
 # Controle Financeiro Pessoal
 
 Sistema de controle financeiro desenvolvido em Python com persistência de dados, relatórios automáticos e dashboard interativo com visualização de gráficos.
